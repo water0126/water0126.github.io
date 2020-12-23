@@ -1,35 +1,17 @@
-# starter-slim
+# S-Connector
 
-1. [Generate with the same files and folders](https://github.com/rundocs/starter-slim/generate) from this repository
-2. Set up your GitHub Pages to source(`/`)
-3. Now you can view your documentation in your site
+## What is this?
 
-## site.pages
+1. S-Connector 는 화상을 통한 사용자간의 통신을 위한 솔루션을 목적으로 제공되어 집니다.
+2. 서비스 개발사는 S-Connector를 이용하여 다양한 형태의 서비스를 만들수 있습니다.
+3. 현재 제공되는 기능은 다자간 화상 통화 기능입니다.
+4. web 사이트에 iframe 으로 embedded 형식으로 사이트에서 자유롭게 이용 할수 있습니다.
+5. 추후 추가적으로 개발될 기능은 아래와 같습니다.
 
-<!-- prettier-ignore-start -->
+- 모바일(ios, android)위한 개발 솔루션 제공(SDK)
+- 콘서트, 강좌등을 위한 솔루션 제공
+- 180 vr 을 통한 실시간 서비스 제공
 
-| source          | link                                                           |
-| --------------- | -------------------------------------------------------------- |
-{% for page in site.pages -%}
-| {{ page.path }} | [{{ page.url | relative_url }}]({{ page.url | relative_url }}) |
-{% endfor %}
+## Usage
 
-<!-- prettier-ignore-end -->
-
-## Documents
-
-https://jekyll-rtd-theme.rundocs.io
-
-## Local debug
-
-```sh
-gem install jekyll bundler
-
-bundle install
-
-JEKYLL_GITHUB_TOKEN=blank PAGES_API_URL=http://0.0.0.0 bundle exec jekyll server --livereload
-```
-
-## The license
-
-The theme is available as open source under the terms of the MIT License
+사이드 바의 메뉴얼을 참고 부탁 드립니다.

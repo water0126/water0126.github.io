@@ -1,0 +1,29 @@
+<html>
+  <header>
+    <script>
+      console.log("javascript load");
+      window.onload = function () {
+        console.log("hello");
+        var joinElement = document.getElementById("join");
+        joinElement.onclick = function (event) {
+          console.log("click");
+          var remoteElement = document.getElementById("remote");
+          console.log("remoteElement", remoteElement);
+          var remote = remoteElement.contentWindow;
+          remote.postMessage(
+            { nickName: "이동욱", roomId: "hellomyApp", role: "PUBLISHER" },
+            "http://localhost:3000"
+          );
+        };
+      };
+    </script>
+  </header>
+  <iframe
+    id="remote"
+    src="https://remote.interwater.biz"
+    style="width: 100%; height: 500px"
+    allow="camera; microphone; display-capture"
+  ></iframe>
+  <!-- <iframe id="remote" src="http://localhost:3000" style="width: 100%;height: 500px;" allow="camera; microphone; display-capture"></iframe> -->
+  <button id="join">참여</button>
+</html>
