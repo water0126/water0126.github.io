@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SConnector = exports.Methods = void 0;
+exports.Methods = void 0;
 var Methods;
 (function (Methods) {
     Methods["Init"] = "init";
@@ -70,5 +70,5 @@ var SConnector = (function () {
     };
     return SConnector;
 }());
-exports.SConnector = SConnector;
+exports.default = SConnector;
 //# sourceMappingURL=s-connector.js.map
