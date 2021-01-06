@@ -8,7 +8,7 @@
 
 인증된 License 정보를 조회 합니다
 
-1. path : license/info
+1. path : v1/info
 2. method : GET
 3. header parameter : s-connector-jwt
    @ 발급 받은 key키를 입력합니다.
@@ -16,7 +16,7 @@
 ### reqeust samle
 
 ```bash
-$ curl --location --request GET 'https://api.interwater.biz/license/info' \
+$ curl --location --request GET 'https://api.interwater.biz/v1/info' \
 --header 's-connector-jwt: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb21haW4iOiJ0cmlhbCIsImVudiI6InByb2QiLCJpc1RyaWFsIjp0cnVlLCJjb21wYW55X25hbWUiOiJzLWNvbm5lY3RvciIsImlhdCI6MTYwOTA2Nzc3MCwiZXhwIjoxNjA5MTU0MTcwfQ.U7qDLxWGerdc24b3bm6UuS_sh6e2s7R_cI20loivcKk'
 
 ```
@@ -39,15 +39,15 @@ $ curl --location --request GET 'https://api.interwater.biz/license/info' \
 
 현재 회의 중인 회의실 정보를 조회합니다.
 
-1. path : video/sessions
+1. path : v1/sessions
 2. method : GET
 3. header parameter : s-connector-jwt
    @ 발급 받은 key키를 입력합니다.
 
-### reqeust samle
+### reqeust sample
 
 ```bash
-$ curl --location --request GET 'https://api.interwater.biz/video/sessions' \
+$ curl --location --request GET 'https://api.interwater.biz/v1/sessions' \
 --header 's-connector-jwt: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb21haW4iOiJ0cmlhbCIsImVudiI6InByb2QiLCJpc1RyaWFsIjp0cnVlLCJjb21wYW55X25hbWUiOiJzLWNvbm5lY3RvciIsImlhdCI6MTYwOTA2Nzc3MCwiZXhwIjoxNjA5MTU0MTcwfQ.U7qDLxWGerdc24b3bm6UuS_sh6e2s7R_cI20loivcKk'
 
 ```
