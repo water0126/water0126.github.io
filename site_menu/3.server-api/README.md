@@ -59,12 +59,28 @@ $ curl --location --request GET 'https://api.interwater.biz/v1/sessions' \
   "status": true,
   "data": [
     {
-      "id": "892",
-      "domain": "trial", // license 기반 사용 domain
-      "sessionId": "ses_I1a162q01o",
-      "roomName": "샘플",
+      "id": "938",
+      "domain": "trial",
+      "sessionId": "ses_ZB2Y3XJTyU",
+      "roomName": "gsda11",
       "status": "OPEN",
-      "createdAt": "2020-12-27T11:24:44.000Z"
+      "createdAt": "2021-01-06T16:04:09.000Z",
+      "sessionTokens": [
+        {
+          "id": "1881",
+          "connectionId": "con_Gxn95TnZBN",
+          "sessionId": "ses_ZB2Y3XJTyU",
+          "sessionName": "f61518bc6f7c54738752bb41eb8d513dd93fd5b1e9dcb4dbb1742c6e04e5df26",
+          "token": "wss://remote.interwater.biz?sessionId=ses_ZB2Y3XJTyU&token=tok_IxZzOIomwGzJxDHO&role=PUBLISHER&versi",
+          "userName": "gdsfagasd",
+          "role": "PUBLISHER",
+          "location": "Yangcheon-gu, South Korea",
+          "platform": "Chrome 87.0.4280.88 on OS X 11.1.0 64-bit",
+          "status": "active",
+          "createdAt": "2021-01-06T16:04:09.000Z",
+          "updatedAt": "2021-01-06T16:04:53.000Z"
+        }
+      ]
     }
   ]
 }
