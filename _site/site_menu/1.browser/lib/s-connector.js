@@ -45,6 +45,7 @@ var SConnector = (function () {
             return;
         this.rElement.setAttribute("src", this.endpoint);
         this.rElement.setAttribute("style", "width:100%;height:100%");
+        console.log("join", join);
         this.sendToSconnector(Methods.JoinRoom, join);
     };
     SConnector.prototype.sendToSconnector = function (method, message) {
