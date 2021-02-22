@@ -125,3 +125,34 @@ $ curl --location --request GET 'https://api.interwater.biz/v1/sessions' \
   ]
 }
 ```
+
+## 2. 개별 session 상태
+
+현재 회의 중인 특정 회의실 정보를 조회합니다.
+
+1. path : v1/sessions/:room_name
+2. method : GET
+3. header parameter : s-connector-jwt
+   @ 발급 받은 key키를 입력합니다.
+
+### reqeust sample
+
+```bash
+$ curl --location --request GET 'https://api.interwater.biz/v1/sessions/room_name' \
+--header 's-connector-jwt: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb21haW4iOiJ0cmlhbCIsImVudiI6InByb2QiLCJpc1RyaWFsIjp0cnVlLCJjb21wYW55X25hbWUiOiJzLWNvbm5lY3RvciIsImlhdCI6MTYwOTA2Nzc3MCwiZXhwIjoxNjA5MTU0MTcwfQ.U7qDLxWGerdc24b3bm6UuS_sh6e2s7R_cI20loivcKk'
+
+```
+
+### response
+
+```json
+{
+    "status": true,
+    "data": {
+        "status": "ON_GOING",
+        "user": 2,
+        "roomName": "gsdagd"
+    }
+}
+```
+
