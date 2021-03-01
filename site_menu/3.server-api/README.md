@@ -107,7 +107,7 @@ $ curl --location --request GET 'https://api.interwater.biz/v1/sessions' \
 }
 ```
 
-## 2. 개별 session 상태
+## 3. 개별 session 상태
 
 현재 회의 중인 특정 회의실 정보를 조회합니다.
 
@@ -137,7 +137,7 @@ $ curl --location --request GET 'https://api.interwater.biz/v1/sessions/room_nam
 }
 ```
 
-## 3. 사용량 조회
+## 4. 사용량 조회
 
 s-connector 에 정보에 따른 s-connector 사용량을 조회 합니다.
 만약 endTime paramter 가 존재 하지 않을경우 시작일부터 현재까지의 데이터를 조회합니다.
