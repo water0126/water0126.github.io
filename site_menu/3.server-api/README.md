@@ -147,10 +147,13 @@ s-connector 에 정보에 따른 s-connector 사용량을 조회 합니다.
 3. header parameter : s-connector-jwt
    @ 발급 받은 key키를 입력합니다.
 
+
 | param     | type   | required | comment   |
 | --------- | ------ | -------- | --------- |
 | startTime | string | true     | 시작 일자 |
 | endTime   | string | false    | 종료 일자 |
+
+
 ### reqeust sample
 
 
