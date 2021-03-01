@@ -96,33 +96,14 @@ $ curl --location --request GET 'https://api.interwater.biz/v1/sessions' \
 
 ```json
 {
-  "status": true,
-  "data": [
-    {
-      "id": "938",
-      "domain": "trial",
-      "sessionId": "ses_ZB2Y3XJTyU",
-      "roomName": "gsda11",
-      "status": "OPEN",
-      "createdAt": "2021-01-06T16:04:09.000Z",
-      "sessionTokens": [
+    "status": true,
+    "data": [
         {
-          "id": "1881",
-          "connectionId": "con_Gxn95TnZBN",
-          "sessionId": "ses_ZB2Y3XJTyU",
-          "sessionName": "f61518bc6f7c54738752bb41eb8d513dd93fd5b1e9dcb4dbb1742c6e04e5df26",
-          "token": "wss://remote.interwater.biz?sessionId=ses_ZB2Y3XJTyU&token=tok_IxZzOIomwGzJxDHO&role=PUBLISHER&versi",
-          "userName": "gdsfagasd",
-          "role": "PUBLISHER",
-          "location": "Yangcheon-gu, South Korea",
-          "platform": "Chrome 87.0.4280.88 on OS X 11.1.0 64-bit",
-          "status": "active",
-          "createdAt": "2021-01-06T16:04:09.000Z",
-          "updatedAt": "2021-01-06T16:04:53.000Z"
+            "status": "WAIT",
+            "user": 1,
+            "roomName": "gfds"
         }
-      ]
-    }
-  ]
+    ]
 }
 ```
 
@@ -156,3 +137,60 @@ $ curl --location --request GET 'https://api.interwater.biz/v1/sessions/room_nam
 }
 ```
 
+## 3. 사용량 조회
+
+s-connector 에 정보에 따른 s-connector 사용량을 조회 합니다.
+만약 endTime paramter 가 존재 하지 않을경우 시작일부터 현재까지의 데이터를 조회합니다.
+
+1. path : v1/static
+2. method : GET
+3. header parameter : s-connector-jwt
+   @ 발급 받은 key키를 입력합니다.
+
+| param     | type   | required | comment   |
+| --------- | ------ | -------- | --------- |
+| startTime | string | true     | 시작 일자 |
+| endTime   | string | false    | 종료 일자 |
+### reqeust sample
+
+
+
+```bash
+$ curl --location --request GET 'https://api.interwater.biz/v1/static?startTime=2021-02-20&endTime=2021-02-25' \
+--header 's-connector-jwt: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMiLCJkb21haW4iOiJodHRwczovL3JlYWRtZS5pbnRlcndhdGVyLmJpeiIsImFjY2Vzc0tleSI6ImZveml6Mm1keXdtIiwiaWF0IjoxNjEzOTk2NTg5LCJleHAiOjE2MTQwMDI1ODl9.Tj9sIE09hljud-WWjOksy2a97TkoJK4BWDMVH-Fh2yM'
+
+```
+
+### response
+
+```json
+{
+    "status": true,
+    "data": {
+        "domain": "https://readme.interwater.biz",
+        "totalSecond": 49951,
+        "detail": [
+            {
+                "roomName": "gsdagd",
+                "sessionTimeSecond": 42936,
+                "createdAt": "2021-02-22T12:39:26.000Z"
+            },
+            {
+                "roomName": "test",
+                "sessionTimeSecond": 1481,
+                "createdAt": "2021-02-22T04:45:20.000Z"
+            },
+            {
+                "roomName": "test",
+                "sessionTimeSecond": 4924,
+                "createdAt": "2021-02-22T00:12:58.000Z"
+            },
+            {
+                "roomName": "12312",
+                "sessionTimeSecond": 610,
+                "createdAt": "2021-02-21T02:34:52.000Z"
+            }
+        ]
+    }
+}
+```
